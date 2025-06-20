@@ -6,12 +6,12 @@
 <div align="center">
   <a href="https://github.com/zyx-0314/">
   </a>
-<!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+
+  <h3 align="center">Meeting Calendar</h3>
 </div>
-<!-- TODO: Make a short description -->
+
 <div align="center">
-  Short Description. (Optional)
+A schedule meeting calendar for organizing and managing meeting times efficiently.
 </div>
 
 <br />
