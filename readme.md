@@ -26,7 +26,6 @@ A schedule meeting calendar for organizing and managing meeting times efficientl
 <br />
 <br />
 
-<!-- TODO: If you want to add more layers for your readme -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -98,41 +97,47 @@ This project is a PHP backend setup with environment-based configuration, integr
 10. File Structure to follow below.
 
 ```
-AD-ProjectName
+AD-Meeting-Calendar
 └─ assets
 |   └─ css
-|   |   └─ name.css
+|   |
 |   └─ img
-|   |   └─ name.jpeg/.jpg/.webp/.png
+|   |   
 |   └─ js
-|       └─ name.js
+|   
 └─ components
-|   └─ name.component.php
+|   └─ componentGroup
 |   └─ templates
-|      └─ name.component.php
+|  
+└─ database
+|   └─ nameOfModels.model
+└─ errors
+|   └─ errorName.error.php
 └─ handlers
-|   └─ name.handler.php
+|   └─ mongodbChecker.handler.php
+|   └─ postgreChecker.handler
 └─ layout
-|   └─ name.layout.php
 └─ pages
-|  └─ pageName
+|  └─ ExamplePage
 |     └─ assets
 |     |  └─ css
-|     |  |  └─ name.css
 |     |  └─ img
-|     |  |  └─ name.jpeg/.jpg/.webp/.png
 |     |  └─ js
-|     |     └─ name.js
 |     └─ index.php
+└─ sql
+|  └─ New Table Auto Increment Script.sql
+|  └─ Old Table Auto Increment.sql
+└─ src
 └─ staticData
-|  └─ name.staticdata.php
 └─ utils
-|   └─ name.utils.php
-└─ vendor
+|   └─ envSetter.util.php
+|   └─ htmlEscape.util.php
 └─ .gitignore
 └─ bootstrap.php
+└─ compose.yaml
 └─ composer.json
 └─ composer.lock
+└─ Dockerfile
 └─ index.php
 └─ readme.md
 └─ router.php
@@ -141,11 +146,9 @@ AD-ProjectName
 
 ## Resources
 
-<!-- TODO: Add References -->
-
 | Title        | Purpose                                                                       | Link          |
 | ------------ | ----------------------------------------------------------------------------- | ------------- |
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| W3School     | Sample purpose would be here like this and this is the example of what it is. | https://www.w3schools.com/php/ |
+| ChatGPT      | Helpful for understanding and debugging PHP logic | trykolang.com             | https://chatgptcom |
+| Docker       | Official documentation for Docker command-line interface usage                | https://docs.docker.com/reference/cli/docker/ |
+| W3Schools    | Beginner-friendly web development tutorials for PHP, HTML, CSS, and more      | https://www.w3schools.com/ |
