@@ -61,7 +61,6 @@ This project is a PHP backend setup with environment-based configuration, integr
 - Centralized DB config loader
 - Dockerized development setup
 - MongoDB & PostgreSQL integration
-- Refactored code structure
 
 ### Technology
 
