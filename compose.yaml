@@ -1,7 +1,5 @@
 services:
   ad-meeting-calendar:
-    volumes:
-      - ./.env:/var/www/html/.env
     build:
       context: .
     container_name: ad-meeting-calendar-service
@@ -16,6 +14,9 @@ services:
           action: rebuild
         - path: ./composer.lock
           action: rebuild
+        - path: ./.env
+          target: /var/www/html/.env
+          action: sync
     depends_on:
       - mongodb
 
