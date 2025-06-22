@@ -109,7 +109,10 @@ AD-Meeting-Calendar
 |   └─ templates
 |  
 └─ database
-|   └─ nameOfModels.model
+|   └─ agenda.model.sql
+|   └─ meeting_users.model.sql
+|   └─ meetings.model.sql
+|   └─ user.model.sql
 └─ errors
 |   └─ errorName.error.php
 └─ handlers
@@ -129,6 +132,7 @@ AD-Meeting-Calendar
 └─ src
 └─ staticData
 └─ utils
+|   └─ dbResetPostgresql.util.php
 |   └─ envSetter.util.php
 |   └─ htmlEscape.util.php
 └─ .gitignore
