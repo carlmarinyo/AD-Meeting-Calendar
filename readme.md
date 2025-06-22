@@ -151,7 +151,6 @@ AD-Meeting-Calendar
 
 | Title        | Purpose                                                                       | Link          |
 | ------------ | ----------------------------------------------------------------------------- | ------------- |
-| W3School     | Sample purpose would be here like this and this is the example of what it is. | https://www.w3schools.com/php/ |
 | ChatGPT      | Helpful for understanding and debugging PHP logic | trykolang.com             | https://chatgptcom |
 | Docker       | Official documentation for Docker command-line interface usage                | https://docs.docker.com/reference/cli/docker/ |
 | W3Schools    | Beginner-friendly web development tutorials for PHP, HTML, CSS, and more      | https://www.w3schools.com/ |
