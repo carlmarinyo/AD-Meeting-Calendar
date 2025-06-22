@@ -41,7 +41,7 @@ foreach ($schemaFiles as $file) {
 }
 
 echo "🔁 Truncating tables…\n";
-$tables = ['meeting_users', 'tasks', 'meetings', 'users'];
+$tables = ['meeting_users', 'agenda', 'meetings', 'users'];
 foreach ($tables as $table) {
     $pdo->exec("TRUNCATE TABLE {$table} RESTART IDENTITY CASCADE;");
 }
