@@ -151,6 +151,6 @@ AD-Meeting-Calendar
 
 | Title        | Purpose                                                                       | Link          |
 | ------------ | ----------------------------------------------------------------------------- | ------------- |
-| ChatGPT      | Helpful for understanding and debugging PHP logic | trykolang.com             | https://chatgptcom |
+| ChatGPT      | Helpful for understanding and debugging PHP logic                             | https://chatgptcom |
 | Docker       | Official documentation for Docker command-line interface usage                | https://docs.docker.com/reference/cli/docker/ |
 | W3Schools    | Beginner-friendly web development tutorials for PHP, HTML, CSS, and more      | https://www.w3schools.com/ |
