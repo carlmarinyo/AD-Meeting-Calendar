@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../utils/envSetter.util.php';
+require_once UTILS_PATH . 'envSetter.util.php';
 $host = $pgConfig['host'];
 $port = $pgConfig['port'];
 $username = $pgConfig['user'];

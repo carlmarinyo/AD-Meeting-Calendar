@@ -3,7 +3,7 @@
 if (!defined('BASE_PATH')) {
     define('BASE_PATH', dirname(__DIR__));
 }
-require_once BASE_PATH . '/vendor/autoload.php';
+require VENDOR_PATH . 'autoload.php';
 
 // Load .env
 $dotenv = Dotenv\Dotenv::createImmutable(BASE_PATH);
