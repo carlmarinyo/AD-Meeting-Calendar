@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 require_once 'bootstrap.php';
-require VENDOR_PATH . 'autoload.php';
+require VENDORS_PATH . 'autoload.php';
 require_once UTILS_PATH . 'envSetter.util.php';
 
 echo "✅ Connected to PostgreSQL.\n";
