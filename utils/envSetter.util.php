@@ -1,5 +1,6 @@
 <?php
-require VENDOR_PATH . 'autoload.php';
+require_once 'bootstrap.php';
+require VENDORS_PATH . 'autoload.php';
 
 // Load .env
 $dotenv = Dotenv\Dotenv::createImmutable(BASE_PATH);
