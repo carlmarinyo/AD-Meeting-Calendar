@@ -1,17 +1,8 @@
 <?php
 declare(strict_types=1);
 
-
-if (!defined('BASE_PATH')) {
-    define('BASE_PATH', __DIR__ . '/../');
-}
-
+require_once 'bootstrap.php';
 require VENDOR_PATH . 'autoload.php';
-
-if (file_exists(BASE_PATH . 'bootstrap.php')) {
-    require BASE_PATH . 'bootstrap.php';
-}
-
 require_once UTILS_PATH . 'envSetter.util.php';
 
 echo "✅ Connected to PostgreSQL.\n";
