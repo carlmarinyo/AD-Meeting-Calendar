@@ -1,8 +1,9 @@
 CREATE TABLE IF NOT EXISTS agenda (
-    id SERIAL PRIMARY KEY,
-    meeting_id INTEGER NOT NULL REFERENCES meetings(id) ON DELETE CASCADE,
-    topic VARCHAR(150) NOT NULL,
-    presenter VARCHAR(100),
-    order_number INTEGER,
-    notes TEXT
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    meeting_id INTEGER NOT NULL REFERENCES meetings(id),
+    assigned_to INTEGER REFERENCES users(id),
+    title VARCHAR(100) NOT NULL,
+    description TEXT,
+    due_date DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
