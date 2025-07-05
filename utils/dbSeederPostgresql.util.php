@@ -93,8 +93,8 @@ try {
 
 echo "🔁 Seeding Agenda\n";
 try {
-    foreach ($tasks as $t) {
-        $stmtTasks->execute([
+    foreach ($agenda as $t) {
+        $stmtAgenda->execute([
             ':m_id' => $t['meeting_id'],
             ':ass_to' => $t['assigned_to'],
             ':title' => $t['title'],
