@@ -6,7 +6,7 @@ require VENDORS_PATH . 'autoload.php';
 require_once UTILS_PATH . 'envSetter.util.php';
 
 //Static datas
-$users = require_once DUMMIES_PATH . 'users.staticData.php';
+$users = require_once DUMMIES_PATH . 'user.staticData.php';
 $meetings = require_once DUMMIES_PATH . 'meetings.staticData';
 $agenda = require_once DUMMIES_PATH . 'agenda.staticData';
 $meeting_users = require_once DUMMIES_PATH . 'meeting_users.staticData';
