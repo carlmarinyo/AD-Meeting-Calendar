@@ -16,10 +16,10 @@ $pdo = new PDO($dsn, $pgConfig['user'], $pgConfig['pass'], [
 // ——— Apply schemas before truncating ———
 echo "📦 Applying schema files...\n";
 $schemaFiles = [
-    'database/users.model.sql',
-    'database/meetings.model.sql',
-    'database/meeting_users.model.sql',
-    'database/agenda.model.sql'
+    DATABASE_PATH . '/users.model.sql',
+    DATABASE_PATH . '/meetings.model.sql',
+    DATABASE_PATH . '/meeting_users.model.sql',
+    DATABASE_PATH . '/agenda.model.sql'
 ];
 
 foreach ($schemaFiles as $file) {
