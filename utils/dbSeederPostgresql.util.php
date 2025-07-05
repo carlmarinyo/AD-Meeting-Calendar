@@ -50,7 +50,7 @@ $stmtMeetings = $pdo->prepare("
 
 $stmtAgenda = $pdo->prepare("
     INSERT INTO agenda (meeting_id, assigned_to, title, description, due_date, created_at)
-    VALUES (:m_id, :ass_to, :title, :desc, :due, cre_at)
+    VALUES (:m_id, :ass_to, :title, :desc, :due, :cre_at)
 ");
 
 $stmtMeetingUsers = $pdo->prepare("
