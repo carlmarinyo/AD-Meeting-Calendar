@@ -4,4 +4,5 @@ define ('UTILS_PATH', BASE_PATH . '/utils/');
 define ('VENDORS_PATH', BASE_PATH . '/vendor/');
 define ('HANDLERS_PATH', BASE_PATH . '/handlers/');
 define ('DUMMIES_PATH', BASE_PATH . '/staticDatas/dummies/');
+define ('DATABASE_PATH', BASE_PATH . '/database');
 chdir(BASE_PATH);
