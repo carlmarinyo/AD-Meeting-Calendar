@@ -16,7 +16,7 @@ $pdo = new PDO($dsn, $pgConfig['user'], $pgConfig['pass'], [
 // ——— Apply schemas before truncating ———
 echo "📦 Applying schema files...\n";
 $schemaFiles = [
-    'database/user.model.sql',
+    'database/users.model.sql',
     'database/meetings.model.sql',
     'database/meeting_users.model.sql',
     'database/agenda.model.sql'
