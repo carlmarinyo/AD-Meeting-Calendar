@@ -39,8 +39,8 @@ foreach ($schemaFiles as $file) {
 
 //For query
 $stmtUsers = $pdo->prepare("
-    INSERT INTO users (username, role, first_name, last_name, password)
-    VALUES (:username, :role, :fn, :ln, :pw)
+    INSERT INTO users (first_name, middle_name, last_name, password, username, role)
+    VALUES (:fn, :mn, :ln, :pw, :user, :role)
 ");
 
 $stmtMeetings = $pdo->prepare("
@@ -63,11 +63,12 @@ echo "🔁 Seeding Users\n";
 try {
     foreach ($users as $u) {
         $stmtUsers->execute([
-            ':username' => $u['username'],
-            ':role' => $u['role'],
-            ':fn' => $u['firstname'],
-            ':ln' => $u['lastname'],
+            ':fn' => $u['first_name'],
+            ':mn' => $u['middle_name'],
+            ':ln' => $u['last_name'],
             ':pw' => password_hash($u['password'], PASSWORD_DEFAULT),
+            ':ln' => $u['username'],
+            ':ln' => $u['role'],
         ]);
     }
 } catch (PDOException $e) {
@@ -112,7 +113,7 @@ try {
 echo "🔁 Seeding Meeting Users\n";
 try {
     foreach ($meeting_users as $mu) {
-        $stmtMeet_Ur->execute([
+        $stmtMeet_Usr->execute([
             ':m_id' => $mu['meeting_id'],
             ':u_id' => $mu['user_id'],
             ':role' => $mu['role'],
