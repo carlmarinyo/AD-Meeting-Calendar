@@ -58,7 +58,7 @@ $stmtMeetingUsers = $pdo->prepare("
     VALUES (:m_id, :u_id, :role)
 ");
 
-
+$allSeeded = true;
 echo "🔁 Seeding Users\n";
 try {
     foreach ($users as $u) {
