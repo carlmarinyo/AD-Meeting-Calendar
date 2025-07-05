@@ -113,7 +113,7 @@ try {
 echo "🔁 Seeding Meeting Users\n";
 try {
     foreach ($meeting_users as $mu) {
-        $stmtMeet_Usr->execute([
+        $stmtMeetingUsers->execute([
             ':m_id' => $mu['meeting_id'],
             ':u_id' => $mu['user_id'],
             ':role' => $mu['role'],
