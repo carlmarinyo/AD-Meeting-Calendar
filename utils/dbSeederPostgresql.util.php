@@ -59,11 +59,70 @@ $stmtMeetingUsers = $pdo->prepare("
 ");
 
 
-
-echo "🔁 Truncating tables…\n";
-$tables = ['meeting_users', 'agenda', 'meetings', 'users'];
-foreach ($tables as $table) {
-    $pdo->exec("TRUNCATE TABLE {$table} RESTART IDENTITY CASCADE;");
+echo "🔁 Seeding Users\n";
+try {
+    foreach ($users as $u) {
+        $stmtUsers->execute([
+            ':username' => $u['username'],
+            ':role' => $u['role'],
+            ':fn' => $u['firstname'],
+            ':ln' => $u['lastname'],
+            ':pw' => password_hash($u['password'], PASSWORD_DEFAULT),
+        ]);
+    }
+} catch (PDOException $e) {
+    echo "❌ Error seeding users: " . $e->getMessage() . "\n";
+    $allSeeded = false;
 }
 
-echo "✅ Tables reset successfully.\n";
+echo "🔁 Seeding Meetings\n";
+try {
+    foreach ($meetings as $m) {
+        $stmtMeetings->execute([
+            ':title' => $m['title'],
+            ':desc' => $m['description'],
+            ':meeting_time' => $m['meeting_time'],
+            ':loc' => $m['location'],
+            ':cre_at' => $m['created_at'],
+        ]);
+    }
+} catch (PDOException $e) {
+    echo "❌ Error seeding meetings: " . $e->getMessage() . "\n";
+    $allSeeded = false;
+}
+
+echo "🔁 Seeding Agenda\n";
+try {
+    foreach ($tasks as $t) {
+        $stmtTasks->execute([
+            ':m_id' => $t['meeting_id'],
+            ':ass_to' => $t['assigned_to'],
+            ':title' => $t['title'],
+            ':desc' => $t['description'],
+            ':due' => $t['due_date'],
+            ':cre_at' => $t['created_at'],
+        ]);
+    }
+} catch (PDOException $e) {
+    echo "❌ Error seeding tasks: " . $e->getMessage() . "\n";
+    $allSeeded = false;
+}
+
+
+echo "🔁 Seeding Meeting Users\n";
+try {
+    foreach ($meeting_users as $mu) {
+        $stmtMeet_Ur->execute([
+            ':m_id' => $mu['meeting_id'],
+            ':u_id' => $mu['user_id'],
+            ':role' => $mu['role'],
+        ]);
+    }
+} catch (PDOException $e) {
+    echo "❌ Error seeding meeting_users: " . $e->getMessage() . "\n";
+    $allSeeded = false;
+}
+
+if ($allSeeded) {
+    echo "✅ Tables have been populated!\n";
+}
