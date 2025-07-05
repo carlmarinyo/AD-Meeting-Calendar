@@ -7,11 +7,30 @@ require_once UTILS_PATH . 'envSetter.util.php';
 
 echo "✅ Connected to PostgreSQL.\n";
 
+//Static datas
+$users = require_once DUMMIES_PATH . 'users.staticData.php';
+$meetings = require_once DUMMIES_PATH . 'meetings.staticData';
+$agenda = require_once DUMMIES_PATH . 'agenda.staticData';
+$meeting_users = require_once DUMMIES_PATH . 'meeting_users.staticData';
+
+
+
 // ——— Connect to PostgreSQL ———
 $dsn = "pgsql:host={$pgConfig['host']};port={$pgConfig['port']};dbname={$pgConfig['db']}";
 $pdo = new PDO($dsn, $pgConfig['user'], $pgConfig['pass'], [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 ]);
+
+
+
+
+
+
+
+
+
+
+
 
 // ——— Apply schemas before truncating ———
 echo "📦 Applying schema files...\n";
