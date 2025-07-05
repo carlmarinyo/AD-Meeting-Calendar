@@ -1,20 +1,27 @@
 <?php
-// the table of users are compose of following columns: id, username, first_name, last_name, password, role
 return [
-    ['username' => 'mverstappen', 
-    'first_name' => 'Max', 
-    'last_name' => 'Verstappen', 
-    'password' => 'champ', 
-    'role' => 'Leader'],
-    ['username' => 'lhamilton', 
-    'first_name' => 'Lewis', 
-    'last_name' => 'Hamilton', 
-    'password' => 'seven', 
-    'role' => 'Member'],
-    ['username' => 'cmarino', 
-    'first_name' => 'Carl', 
-    'last_name' => 'Marino', 
-    'password' => '123', 
-    'role' => 'Member']
-
+    [
+        'first_name' => 'Max',
+        'middle_name' => 'Emilian',
+        'last_name' => 'Verstappen',
+        'password' => 'champ',
+        'username' => 'mverstappen',
+        'role' => 'Leader'
+    ],
+    [
+        'first_name' => 'Lewis',
+        'middle_name' => 'Carl',
+        'last_name' => 'Hamilton',
+        'password' => 'seven',
+        'username' => 'lhamilton',
+        'role' => 'Member'
+    ],
+    [
+        'first_name' => 'Carl',
+        'middle_name' => null,
+        'last_name' => 'Marino',
+        'password' => '123',
+        'username' => 'cmarino',
+        'role' => 'Member'
+    ]
 ];
