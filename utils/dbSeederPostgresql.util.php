@@ -67,8 +67,8 @@ try {
             ':mn' => $u['middle_name'],
             ':ln' => $u['last_name'],
             ':pw' => password_hash($u['password'], PASSWORD_DEFAULT),
-            ':ln' => $u['username'],
-            ':ln' => $u['role'],
+            ':user' => $u['username'],
+            ':role' => $u['role'],
         ]);
     }
 } catch (PDOException $e) {
@@ -82,7 +82,7 @@ try {
         $stmtMeetings->execute([
             ':title' => $m['title'],
             ':desc' => $m['description'],
-            ':meeting_time' => $m['meeting_time'],
+            ':meet_time' => $m['meeting_time'],
             ':loc' => $m['location'],
             ':cre_at' => $m['created_at'],
         ]);
