@@ -6,7 +6,7 @@ require_once UTILS_PATH . '/auth.util.php';
 
 Auth::init();
 if (!Auth::check()) {
-    header('Location: /errors/login_failed.php');
+    header('Location: /errors/login_failed.error.php');
     exit;
 }
 if (session_status() === PHP_SESSION_NONE) session_start();
