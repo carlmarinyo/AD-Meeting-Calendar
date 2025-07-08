@@ -14,7 +14,7 @@ $message = $_GET['message'] ?? 'Something went wrong.';
             padding: 0;
             height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            background-color:rgb(22,22,22);
             display: flex;
             align-items: center;
             justify-content: center;

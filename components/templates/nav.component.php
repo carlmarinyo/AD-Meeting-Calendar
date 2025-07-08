@@ -49,7 +49,7 @@ function navHeader(): void
         }
 
         header {
-            background-color: #343a40;
+             background-color: #007bff;
             color: white;
             padding: 15px 20px;
             font-family: Arial, sans-serif;
