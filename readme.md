@@ -99,42 +99,59 @@ This project is a PHP backend setup with environment-based configuration, integr
 AD-Meeting-Calendar
 └─ assets
 |   └─ css
-|   |
+|   |  └─ style.css
 |   └─ img
 |   |   
 |   └─ js
 |   
 └─ components
 |   └─ componentGroup
+|      └─ card.component.php
 |   └─ templates
-|  
+|      └─ nav.component.php
+|      └─ foot.component.php
+|      └─ head.component.php
 └─ database
 |   └─ agenda.model.sql
 |   └─ meeting_users.model.sql
 |   └─ meetings.model.sql
-|   └─ user.model.sql
+|   └─ users.model.sql
 └─ errors
-|   └─ errorName.error.php
+|   └─ login_failed.error.php
 └─ handlers
 |   └─ mongodbChecker.handler.php
-|   └─ postgreChecker.handler
+|   └─ postgreChecker.handler.php
+|   └─ auth.handler.php
 └─ layout
+|      └─ main.layout.php
 └─ pages
-|  └─ ExamplePage
+|  └─ login
 |     └─ assets
 |     |  └─ css
+|     |   └─ login.css
 |     |  └─ img
+|     |   └─ calendar.jpg
+|     |   └─ profile.jpg
+|     |   └─ settings.jpg
 |     |  └─ js
-|     └─ index.php
+|     └─ login.php
 └─ sql
 |  └─ New Table Auto Increment Script.sql
 |  └─ Old Table Auto Increment.sql
 └─ src
 └─ staticData
+|  └─ dummies
+|   └─ agenda.staticData.php
+|   └─ meetings.staticData.php
+|   └─ meeting_users.staticData.php
+|   └─ user.staticData.php
 └─ utils
 |   └─ dbResetPostgresql.util.php
 |   └─ envSetter.util.php
 |   └─ htmlEscape.util.php
+|   └─ dbMigratePostgresql.util.php
+|   └─ dbSeederPostgresql.util.php
+|   └─ auth.util.php
 └─ .gitignore
 └─ bootstrap.php
 └─ compose.yaml
