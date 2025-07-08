@@ -29,7 +29,7 @@ if ($action === 'login' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     if (Auth::login($pdo, $usernameInput, $passwordInput)) {
         $user = Auth::user();
         error_log("[auth.handler.php] Login successful for user_id={$user['id']}");
-        header('Location: /pages/login/index.php'); // Redirect to dashboard or another page
+        header('Location: /pages/login/login.php'); // Redirect to dashboard or another page
         exit;
     } else {
         error_log("[auth.handler.php] Login failed for username='{$usernameInput}'");
