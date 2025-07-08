@@ -1,6 +1,13 @@
 <?php
 require_once __DIR__ . '/../../bootstrap.php';
 require TEMPLATES_PATH . '/nav.component.php';
+require_once UTILS_PATH . '/auth.util.php';
+
+Auth::init();
+if (!Auth::check()) {
+    header('Location: /errors/login_failed.php');
+    exit;
+}
 if (session_status() === PHP_SESSION_NONE) session_start();
 navHeader();
 ?>
