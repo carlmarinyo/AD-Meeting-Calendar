@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
     <?php 
 require_once 'bootstrap.php';
-require_once HANDLERS_PATH . 'mongodbChecker.handler.php';
-require_once HANDLERS_PATH . 'postgreChecker.handler.php';
  $error = trim((string) ($_GET['error'] ?? ''));
 $error = str_replace("%", " ", $error);
     ?>
-
+    <div class="login-form">
         <form action="/handlers/auth.handler.php" method="POST">
         <label for="username" class="label">Username</label>
         <input id="username" name="username" type="text" required class="input">
@@ -28,6 +27,7 @@ $error = str_replace("%", " ", $error);
         <div class="error"><?= htmlspecialchars($error) ?></div>
         <?php endif; ?>
     </form>
+    </div>
     
 </body>
 </html>
