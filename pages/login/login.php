@@ -18,18 +18,28 @@ navHeader();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/login.css" />
 </head>
 <body>
-    <h1>Meeting Calendar!!</h1>
         <div class="card-container">
-
-
     <?php
     renderCard(
     "My Profile",
     "Manage your personal details and account preferences.",
-    "/assets/profile.jpg",
-    "/pages/profile.php"
+    "./assets/img/profile.jpg",
+    "/pages/login.php"
+);  
+    renderCard(
+    "Calendar",
+    "View scheduled activities and stay on top of upcoming events or deadlines.",
+    "./assets/img/calendar.jpg",
+    "/pages/login.php"
+);  
+    renderCard(
+    "Settings",
+    "Adjust your preferences, update account information, and manage security options.",
+    "./assets/img/settings.jpg",
+    "/pages/login.php"
 );  
     ?>
        </div>
